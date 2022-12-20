@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Movies and Actors</title>
+</head>
+<body class=page>
+        {% block links %}
+            <a href="{{ url_for('people') }}">List of movie people (actors, directors ...) </a><br>
+            <a href="{{ url_for('movies') }}">List of movies</a><br>
+            <a href="{{ url_for('movie_info') }}">Movie Info</a><br>
+            <a href="{{ url_for('movies_year') }}">Find movies released in given year</a><br>
+            <a href="{{ url_for('movie_actors') }}">Find actors from movie</a><br>
+            <a href="{{ url_for('movie_director') }}">Find movie director</a><br>
+            <a href="{{ url_for('movie_cast') }}">Movie cast</a><br>
+            <a href="{{ url_for('person_in_movies') }}">Find person's movies</a><br>
+
+        {% endblock %}
+        {% block content %}{% endblock %}
+</body>
+</html>

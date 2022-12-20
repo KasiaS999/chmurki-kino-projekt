@@ -1,0 +1,10 @@
+{% extends "index.html" %}
+{% block content %}
+{% for mesg in get_flashed_messages() %}
+          <h4>{{ mesg }}</h4>
+{% endfor %}
+<h4>Info:</h4>
+<a>Title: {{title}}</a><br>
+<a>Tagline: {{tagline}}</a><br>
+<a>Released: {{released}}</a><br>
+{% endblock %}

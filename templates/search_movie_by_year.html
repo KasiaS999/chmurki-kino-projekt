@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block content %}
+{% for mesg in get_flashed_messages() %}
+          <h4>{{ mesg }}</h4>
+{% endfor %}
+<form method="POST">
+ <label>Find movies from year: </label>
+    <input type="text" name="year"
+       placeholder="Year"
+       value="{{ request.form['year'] }}">
+
+ <button type="submit">Search</button>
+</form>
+{% endblock %}

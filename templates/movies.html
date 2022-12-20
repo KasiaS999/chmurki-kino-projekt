@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+{% block content %}
+{% for mesg in get_flashed_messages() %}
+          <h4>{{ mesg }}</h4>
+{% endfor %}
+<h4>Movies:</h4>
+<ul>
+        {% for row in movies %}
+        <li>{{ row['n']['title']}}</li>
+        {% endfor %}
+</ul>
+{% endblock %}

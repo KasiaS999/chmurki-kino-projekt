@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block content %}
+{% for mesg in get_flashed_messages() %}
+          <h4>{{ mesg }}</h4>
+{% endfor %}
+
+<h4>Movie's people (with role):</h4>
+<ul>
+        {% for key in people %}
+        <li><b>{{ people[key]['name']}}</b>, role: {{ people[key]['r']}}</li>
+        {% endfor %}
+</ul>
+{% endblock %}
